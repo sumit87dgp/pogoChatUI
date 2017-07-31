@@ -1,0 +1,28 @@
+{
+  "name": "pogochat_ui",
+  "version": "1.0.0",
+  "description": "UI for Pogo Chat",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node buildScripts/srcServer.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumit87dgp/pogoChatUI.git"
+  },
+  "author": "Team UI Pogo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sumit87dgp/pogoChatUI/issues"
+  },
+  "homepage": "https://github.com/sumit87dgp/pogoChatUI#readme",
+  "devDependencies": {
+    "angular": "^1.6.5",
+    "angular-material": "^1.1.4",
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "express": "^4.15.3",
+    "open": "0.0.5"
+  }
+}
