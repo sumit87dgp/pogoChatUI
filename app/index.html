@@ -1,6 +1,7 @@
 <html ng-app="pogoApp">
 
 <head>
+    <link rel="stylesheet" href="angular-material/angular-material.min.css">
     <script src="/angular/angular.min.js"></script>
     <script src="/angular-route/angular-route.min.js"></script>
     <script src="/angular-animate/angular-animate.min.js"></script>
@@ -13,8 +14,16 @@
 
 </head>
 
-<body>
+<body ng-cloak>
     <h1>Pogo Chat</h1>
+    <div layout="column">
+        <div>Header Goes Here. Testing if angular is working "{2+2}=" {{2+2}}</div>
+        <div>Main Content Goes Here
+           
+        </div>
+        <div>Footer Goes Here</div>
+    </div>
+
 </body>
 
 </html>
