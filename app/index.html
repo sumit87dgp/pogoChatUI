@@ -1,6 +1,9 @@
 <html ng-app="pogoApp">
 
 <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/">
     <link rel="stylesheet" href="angular-material/angular-material.min.css">
     <script src="/angular/angular.min.js"></script>
     <script src="/angular-route/angular-route.min.js"></script>
@@ -11,17 +14,18 @@
     <script src="/app.config.js"></script>
     <script src="/login/_login.js"></script>
     <script src="/registration/_registration.js"></script>
+    <script src="/home/_home.js"></script>
 
 </head>
 
 <body ng-cloak>
-    <h1>Pogo Chat</h1>
+
     <div layout="column">
-        <div>Header Goes Here. Testing if angular is working "{2+2}=" {{2+2}}</div>
-        <div>Main Content Goes Here
-           
+        <div flex=15 style="background-color:cornflowerblue">Header Goes Here. Testing if angular is working "{2+2}=" {{2+2}}</div>
+        <div flex=75 layout="row" ng-view>
+
         </div>
-        <div>Footer Goes Here</div>
+        <div flex=10 style="background-color:cornflowerblue">Footer Goes Here</div>
     </div>
 
 </body>
