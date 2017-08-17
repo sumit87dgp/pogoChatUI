@@ -1,39 +1,36 @@
-<div layout="row">
+<div layout="row" flex>
     <div flex>
         <md-content layout-padding>
-            <div>
-                <form id="loginForm">
-                    <div layout="column">
+            <form id="loginForm">
+                <div layout="column">
+                    <md-input-container class="md-block">
+                        <label>Email Id</label>
+                        <input required name="emailId">
+                        <div ng-messages="loginForm.emailId.$error">
+                            <div ng-message="required">Email Id is required.</div>
+                        </div>
+                    </md-input-container>
 
-                        <md-input-container class="md-block">
-                            <label>Email Id</label>
-                            <input required name="emailId">
-                            <div ng-messages="loginForm.emailId.$error">
-                                <div ng-message="required">Email Id is required.</div>
-                            </div>
-                        </md-input-container>
+                    <md-input-container class="md-block">
+                        <label>Password</label>
+                        <input required name="password">
+                        <div ng-messages="loginForm.password.$error">
+                            <div ng-message="required">Password is required.</div>
+                        </div>
+                    </md-input-container>
+                    <md-button type="submit">Log In</md-button>
+                </div>
+            </form>
 
-                        <md-input-container class="md-block">
-                            <label>Password</label>
-                            <input required name="password">
-                            <div ng-messages="loginForm.emailId.$error">
-                                <div ng-message="required">Email Id is required.</div>
-                            </div>
-                        </md-input-container>
-
-                        <md-button type="submit">Log In</md-button>
-                    </div>
-                </form>
-            </div>
 
         </md-content>
 
     </div>
 
     <div flex>
-       <md-content layout-padding>
-
-       </md-content>
+        <md-content layout-padding>
+            Placeholder for passport auth
+        </md-content>
     </div>
 
 
