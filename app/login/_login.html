@@ -1,11 +1,11 @@
-<div layout="row" flex>
+<div  layout="row" ng-controller="loginController as loginCtrl" flex>
     <div flex>
         <md-content layout-padding>
-            <form id="loginForm">
+            <form id="loginForm" ng-submit="loginCtrl.login()">
                 <div layout="column">
                     <md-input-container class="md-block">
                         <label>Email Id</label>
-                        <input required name="emailId">
+                        <input required name="emailId" ng-model="loginCtrl.user.emailId">
                         <div ng-messages="loginForm.emailId.$error">
                             <div ng-message="required">Email Id is required.</div>
                         </div>
@@ -13,12 +13,18 @@
 
                     <md-input-container class="md-block">
                         <label>Password</label>
-                        <input required name="password">
+                        <input type="password" required name="password" ng-model="loginCtrl.user.passWord">
                         <div ng-messages="loginForm.password.$error">
                             <div ng-message="required">Password is required.</div>
                         </div>
                     </md-input-container>
-                    <md-button type="submit">Log In</md-button>
+                    <div layout="row">
+                        <md-input-container class="md-block">
+                                <md-checkbox name="name" class="md-raised md-primary">Remember Me</md-checkbox>
+                                <md-button type="submit" ng-disabled="loginform.$invalid" class="md-raised md-primary">Log In</md-button>
+                        </md-input-container>
+                    </div>
+
                 </div>
             </form>
 
@@ -29,7 +35,23 @@
 
     <div flex>
         <md-content layout-padding>
-            Placeholder for passport auth
+            <div layout="column">
+
+                        <md-button type="submit" class="md-raised md-primary">
+
+                                    <md-icon md-svg-src = '/svgIcons/facebook.svg' class="sc-icon"></md-icon>
+                                    <span class="sc-text">Login With Facebook</span>
+                        </md-button>
+
+
+                    <md-button type="submit" ng-disabled="loginform.$invalid" class="md-raised md-accent">
+
+                            <md-icon md-svg-src='/svgIcons/google-plus.svg' class="sc-icon"></md-icon>
+                            <span class="sc-text">Login With Google</span>
+
+                    </md-button>
+
+            </div>
         </md-content>
     </div>
 

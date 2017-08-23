@@ -2,9 +2,9 @@
 
     'use strict';
 
-    angular.module('pogoApp').controller('loginController', ['appDataServices', LoginController]);
+    angular.module('pogoApp').controller('loginController', ['userDataService', LoginController]);
 
-    function LoginController(appDataServices) {
+    function LoginController(userDataService) {
         var vm = this;
         vm.user = {
             emailId: '',
@@ -12,10 +12,12 @@
         };
 
 
-        vm.login = function (logincredential) {
+        vm.login = function () {
 
             // To Do
             // Call login User to Authenticate User login
+            console.log('user',vm.user);
+            userDataService.authenticateUser();
 
         };
 

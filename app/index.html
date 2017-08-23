@@ -6,31 +6,40 @@
     <base href="/">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="angular-material/angular-material.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <link rel="stylesheet" href="angular-material/angular-material.min.css" />
+    <link rel="stylesheet" href="angular-material-icons/angular-material-icons.css"/>
     <link rel="stylesheet" href="/assets/app.css" />
+    <link rel="stylesheet" href="/assets/svg.css">
 
     <script src="/angular/angular.min.js"></script>
     <script src="/angular-route/angular-route.min.js"></script>
     <script src="/angular-animate/angular-animate.min.js"></script>
     <script src="/angular-aria/angular-aria.min.js"></script>
     <script src="/angular-material/angular-material.min.js"></script>
+    <script src="/angular-material-icons/angular-material-icons.js"></script>
+    <script src="/angular-messages/angular-messages.min.js"></script>
+
+
     <script src="/app.js"></script>
     <script src="/app.config.js"></script>
+    <script src="/serviceFunctions/factories/userdataServices.js"></script>
     <script src="/login/_login.js"></script>
     <script src="/registration/_registration.js"></script>
     <script src="/home/_home.js"></script>
+
+
 
 </head>
 
 <body ng-cloak>
 
     <div layout="column">
-        <div flex=15 style="background-color:cornflowerblue">Header Goes Here. Testing if angular is working "{2+2}=" {{2+2}}</div>
-        <div flex=75 layout="row" layout-align="center center" style="background-color:brown;" ng-view>
-Main Content
+        <div flex=15 class="applyBorder" >Header Goes Here. Testing if angular is working "{2+2}=" {{2+2}}</div>
+        <div flex=75 layout="row" layout-align="center center" ng-view class="applyBorder">
         </div>
-        <div flex=10 style="background-color:cornflowerblue">Footer Goes Here</div>
+        <div flex=10 class="applyBorder">Footer Goes Here</div>
     </div>
 
 </body>

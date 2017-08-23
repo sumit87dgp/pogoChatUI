@@ -1,6 +1,5 @@
-
-<md-content flex="40" ng-controller="HomeController">
-    <md-tabs md-stretch-tabs="always" md-dynamic-height md-border-bottom>
+<!-- <md-content flex="40" ng-controller="HomeController"  md-whiteframe >
+    <md-tabs md-stretch-tabs="always" md-no-ink="true" md-dynamic-height>
         <md-tab label="Sign In">
             <ng-include src="'/login/_login.html'"></ng-include>
         </md-tab>
@@ -8,6 +7,28 @@
             <ng-include src="'/registration/_registration.html'"></ng-include>
         </md-tab>
     </md-tabs>
+</md-content> -->
+
+
+
+<md-content flex="50" ng-controller="HomeController" md-whiteframe layout-padding>
+    <md-tabs md-stretch-tabs="always" md-no-ink="true" md-dynamic-height>
+        <md-tab>
+            <md-tab-label>
+                Sign In
+            </md-tab-label>
+            <md-tab-body>
+                <ng-include src="'/login/_login.html'"></ng-include>
+            </md-tab-body>
+        </md-tab>
+        <md-tab>
+            <md-tab-label>
+                Sign Up
+            </md-tab-label>
+            <md-tab-body>
+                <ng-include src="'/registration/_registration.html'"></ng-include>
+            </md-tab-body>
+
+        </md-tab>
+    </md-tabs>
 </md-content>
-
-

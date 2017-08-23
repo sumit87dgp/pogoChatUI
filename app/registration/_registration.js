@@ -2,7 +2,7 @@
 
     'use strict';
 
-    angular.module('pogoApp').controller('registerController', ['appDataService', RegisterController]);
+    angular.module('pogoApp').controller('registerController', ['userDataService', RegisterController]);
 
     function RegisterController(appDataService) {
 

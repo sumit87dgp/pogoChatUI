@@ -2,6 +2,6 @@
 
     'use strict';
 
-    angular.module('pogoApp',['ngMaterial','ngRoute'])
+    angular.module('pogoApp',['ngMaterial','ngRoute','ngMdIcons','ngMessages'])
 
 })();
